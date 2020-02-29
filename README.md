@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/norulab/android-exoplayer-fullscreen.svg)](https://jitpack.io/#norulab/android-exoplayer-fullscreen)
+
 # Fullscreen Exoplayer
 
 Using exoplayer with fullscreen option (in Kotlin)
@@ -19,7 +21,8 @@ Step 2. Add the dependency
 
 ```
 dependencies {
-	        implementation 'com.github.jewom:android-exoplayer-fullscreen:1.0.0'
+	implementation 'com.google.android.exoplayer:exoplayer:2.11.3'
+	implementation 'com.github.norulab:android-exoplayer-fullscreen:1.0.0'
 	}
 ```
 
