@@ -51,6 +51,7 @@ Step1. Add you ExoPlayer to your Layout
 
 Step2. Use the library
 ```
+val player = SimpleExoPlayer.Builder(context).build()
 player.preparePlayer(playerView)
 player.setSource(applicationContext, "http://html5videoformatconverter.com/data/images/happyfit2.mp4")
 ```
