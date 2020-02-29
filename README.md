@@ -4,8 +4,7 @@
 
 Using exoplayer with fullscreen option (in Kotlin)
 
-<img src="https://github.com/Norulab/android-exoplayer-fullscreen/blob/master/exofullscreen_screen1.png" width="250" height="450">
-<img src="https://github.com/Norulab/android-exoplayer-fullscreen/blob/master/exofullscreen_screen1.png" width=450" height="200">
+<img src="https://github.com/Norulab/android-exoplayer-fullscreen/blob/master/exofullscreen_screen.png" width="500" height="300">
 
 
 ## Getting Started
