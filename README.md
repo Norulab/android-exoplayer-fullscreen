@@ -4,7 +4,7 @@
 
 Using exoplayer with fullscreen option (in Kotlin)
 
-![Screen1](https://raw.githubusercontent.com/norulab/android-exoplayer-fullscreen/exofullscreen_screen1.png)
+![Screen1](https://github.com/Norulab/android-exoplayer-fullscreen/blob/master/exofullscreen_screen1.png)
 ![Screen2](https://raw.githubusercontent.com/norulab/android-exoplayer-fullscreen/exofullscreen_screen2.png)
 
 
