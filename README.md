@@ -2,7 +2,7 @@
 
 # Fullscreen Exoplayer
 
-Using exoplayer with fullscreen option (in Kotlin)
+Using ExoPlayer with fullscreen option (Android/Kotlin)
 
 <img src="https://github.com/Norulab/android-exoplayer-fullscreen/blob/master/exofullscreen_screen.png" width="550" height="300">
 
