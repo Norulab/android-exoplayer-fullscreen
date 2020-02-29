@@ -2,7 +2,7 @@
 
 # Fullscreen Exoplayer
 
-Using exoplayer with fullscreen option (in Kotlin)
+Using ExoPlayer with fullscreen option (Android/Kotlin)
 
 <img src="https://github.com/Norulab/android-exoplayer-fullscreen/blob/master/exofullscreen_screen.png" width="550" height="300">
 
@@ -25,7 +25,7 @@ Step 2. Add the dependency
 ```
 dependencies {
 	implementation 'com.google.android.exoplayer:exoplayer:2.11.3'
-	implementation 'com.github.norulab:android-exoplayer-fullscreen:1.0.0'
+	implementation 'com.github.norulab:android-exoplayer-fullscreen:1.1.1'
 }
 ```
 
@@ -51,11 +51,20 @@ Step1. Add you ExoPlayer to your Layout
 
 Step2. Use the library
 ```
+val player = SimpleExoPlayer.Builder(context).build()
 player.preparePlayer(playerView)
 player.setSource(applicationContext, "http://html5videoformatconverter.com/data/images/happyfit2.mp4")
 ```
 
 That's it!
+
+
+## Options
+
+If you want to force the landscape :
+```
+player.preparePlayer(playerView, true)
+```
 
 ## Contributing
 
