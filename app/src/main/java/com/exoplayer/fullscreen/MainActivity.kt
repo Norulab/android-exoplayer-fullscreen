@@ -14,8 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        player.preparePlayer(playerView)
+        player.preparePlayer(playerView, true)
         player.setSource(applicationContext, "http://html5videoformatconverter.com/data/images/happyfit2.mp4")
         player.playWhenReady = true
     }
