@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        player.preparePlayer(playerView, playerViewFullscreen)
+        player.preparePlayer(playerView)
         player.setSource(applicationContext, "http://html5videoformatconverter.com/data/images/happyfit2.mp4")
         player.playWhenReady = true
     }

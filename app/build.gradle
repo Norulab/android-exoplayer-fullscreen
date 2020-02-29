@@ -9,7 +9,7 @@ android {
         minSdkVersion 22
         targetSdkVersion 29
         versionCode 2
-        versionName "1.0.1"
+        versionName "1.1.0"
     }
     compileOptions{
         targetCompatibility JavaVersion.VERSION_1_8
@@ -28,7 +28,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
     implementation 'com.google.android.exoplayer:exoplayer:2.11.3'
-    implementation 'com.github.norulab:android-exoplayer-fullscreen:1.0.0'
+    implementation project(":exofullscreen")
 }
 repositories {
     mavenCentral()

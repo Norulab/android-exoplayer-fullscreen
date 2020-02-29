@@ -3,13 +3,12 @@ package com.norulab.exofullscreen
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.ActivityInfo
+import android.graphics.Color
 import android.net.Uri
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.source.MediaSource
@@ -22,19 +21,14 @@ import com.google.android.exoplayer2.util.Util
 
 @SuppressLint("SourceLockedOrientationActivity")
 fun SimpleExoPlayer.preparePlayer(playerView: PlayerView) {
-    require(playerView.rootView is RelativeLayout || playerView.rootView is ConstraintLayout) {
-        "Root view of the layout must be RelativeLayout or ConstraintLayout"
-    }
 
     (playerView.context as AppCompatActivity).apply {
         val playerViewFullscreen = PlayerView(this)
-        playerViewFullscreen.layoutParams.apply {
-            width= ViewGroup.LayoutParams.MATCH_PARENT
-            height= ViewGroup.LayoutParams.MATCH_PARENT
-        }
-        (playerView.rootView as ViewGroup).apply {
-            addView(playerView, childCount)
-        }
+        val layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+        playerViewFullscreen.layoutParams = layoutParams
+        playerViewFullscreen.visibility = View.GONE
+        playerViewFullscreen.setBackgroundColor(Color.BLACK)
+        (playerView.rootView as ViewGroup).apply { addView(playerViewFullscreen, childCount) }
 
         val fullScreenButton: ImageView = playerView.findViewById(R.id.exo_fullscreen_icon)
         val normalScreenButton: ImageView = playerViewFullscreen.findViewById(R.id.exo_fullscreen_icon)
