@@ -10,11 +10,11 @@ Step 1. Add the JitPack repository to your root build.gradle at the end of repos
 
 ```
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 
 Step 2. Add the dependency
@@ -28,43 +28,31 @@ dependencies {
 
 ## Demonstration
 
-Step1. Make a layout like this one
+Step1. Add you ExoPlayer to your Layout
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:keepScreenOn="true"
     tools:context=".MainActivity">
-
-     <RelativeLayout
-         android:layout_width="match_parent"
-         android:layout_height="300dp">
-
-          <com.google.android.exoplayer2.ui.PlayerView
-              android:id="@+id/playerView"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent" />
-
-     </RelativeLayout>
 
      <com.google.android.exoplayer2.ui.PlayerView
          android:id="@+id/playerViewFullscreen"
          android:visibility="gone"
          android:layout_width="match_parent"
-         android:layout_height="match_parent" />
+         android:layout_height="300dp" />
 
 </RelativeLayout>
 ```
 
-Step2. Test this code using two exo PlayerView
+Step2. Use the library
 ```
-player.preparePlayer(playerView, playerViewFullscreen)
+player.preparePlayer(playerView)
 player.setSource(applicationContext, "http://html5videoformatconverter.com/data/images/happyfit2.mp4")
-player.playWhenReady = true
 ```
 
+That's it!
 
 ## Contributing
 
