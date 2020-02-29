@@ -6,10 +6,10 @@ android {
     compileSdkVersion 29
     defaultConfig {
         applicationId "com.norulab.exofullscreen"
-        minSdkVersion 22
+        minSdkVersion 19
         targetSdkVersion 29
-        versionCode 3
-        versionName "1.1.1"
+        versionCode 4
+        versionName "1.1.2"
     }
     compileOptions{
         targetCompatibility JavaVersion.VERSION_1_8
