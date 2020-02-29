@@ -4,6 +4,10 @@
 
 Using exoplayer with fullscreen option (in Kotlin)
 
+![Screen1](https://github.com/norulab/android-exoplayer-fullscreen/exofullscreen_screen1.png)
+![Screen2](https://github.com/norulab/android-exoplayer-fullscreen/exofullscreen_screen2.png)
+
+
 ## Getting Started
 
 Step 1. Add the JitPack repository to your root build.gradle at the end of repositories:
