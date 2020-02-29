@@ -57,6 +57,14 @@ player.setSource(applicationContext, "http://html5videoformatconverter.com/data/
 
 That's it!
 
+
+## Options
+
+If you want to force the landscape :
+```
+player.preparePlayer(playerView, true)
+```
+
 ## Contributing
 
 You're contribution is welcome here!
