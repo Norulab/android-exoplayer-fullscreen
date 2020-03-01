@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
         MediaPlayer.pausePlayer()
     }
 
-    public override fun onDestroy() {
+    public override fun onStop() {
         MediaPlayer.stopPlayer()
         super.onDestroy()
     }
