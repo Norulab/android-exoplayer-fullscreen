@@ -25,7 +25,7 @@ Step 2. Add the dependency
 ```
 dependencies {
 	implementation 'com.google.android.exoplayer:exoplayer:2.11.3'
-	implementation 'com.github.norulab:android-exoplayer-fullscreen:1.1.2'
+	implementation 'com.github.norulab:android-exoplayer-fullscreen:1.1.3'
 }
 ```
 
@@ -65,6 +65,31 @@ If you want to force the landscape :
 ```
 player.preparePlayer(playerView, true)
 ```
+
+You can use the MediaPlayer object to initialise the player and start/pause/stop the player :
+```
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        MediaPlayer.initialize(applicationContext)
+        MediaPlayer.exoPlayer?.preparePlayer(playerView, true)
+        MediaPlayer.exoPlayer?.setSource(applicationContext, "http://html5videoformatconverter.com/data/images/happyfit2.mp4")
+        MediaPlayer.startPlayer()
+    }
+
+    public override fun onPause() {
+        super.onPause()
+        MediaPlayer.pausePlayer()
+    }
+
+    public override fun onDestroy() {
+        MediaPlayer.stopPlayer()
+        super.onDestroy()
+    }
+}
+
 
 ## Contributing
 
