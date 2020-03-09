@@ -61,8 +61,8 @@ fun SimpleExoPlayer.setSource(context: Context, url: String){
     val dataSourceFactory: DataSource.Factory = DefaultDataSourceFactory(context, Util.getUserAgent(context, "app"))
     val videoSource: MediaSource =
             if (url.endsWith("m3u8") || url.endsWith("m3u"))
-                ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(url))
-            else
                 HlsMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(url))
+            else
+                ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(url))
     this.prepare(videoSource)
 }

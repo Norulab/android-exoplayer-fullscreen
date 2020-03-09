@@ -8,8 +8,8 @@ android {
         applicationId "com.norulab.exofullscreen"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 8
-        versionName "1.1.6"
+        versionCode 9
+        versionName "1.1.7"
     }
     compileOptions{
         targetCompatibility JavaVersion.VERSION_1_8
