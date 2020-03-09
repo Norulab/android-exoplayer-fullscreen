@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.pm.ActivityInfo
 import android.graphics.Color
 import android.net.Uri
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -13,6 +14,7 @@ import androidx.core.content.ContextCompat
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.source.MediaSource
 import com.google.android.exoplayer2.source.ProgressiveMediaSource
+import com.google.android.exoplayer2.source.hls.HlsMediaSource
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
 import com.google.android.exoplayer2.ui.PlayerView
 import com.google.android.exoplayer2.upstream.DataSource
@@ -56,7 +58,11 @@ fun SimpleExoPlayer.preparePlayer(playerView: PlayerView, forceLandscape:Boolean
     }
 }
 fun SimpleExoPlayer.setSource(context: Context, url: String){
-    val dataSourceFactory: DataSource.Factory = DefaultDataSourceFactory(context, "Android " + Util.getUserAgent(context, "app"))
-    val videoSource: MediaSource = ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(url))
+    val dataSourceFactory: DataSource.Factory = DefaultDataSourceFactory(context, Util.getUserAgent(context, "app"))
+    val videoSource: MediaSource =
+            if (url.endsWith("m3u8") || url.endsWith("m3u"))
+                ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(url))
+            else
+                HlsMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(url))
     this.prepare(videoSource)
 }
