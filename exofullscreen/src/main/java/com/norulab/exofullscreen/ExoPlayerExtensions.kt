@@ -56,7 +56,7 @@ fun SimpleExoPlayer.preparePlayer(playerView: PlayerView, forceLandscape:Boolean
     }
 }
 fun SimpleExoPlayer.setSource(context: Context, url: String){
-    val dataSourceFactory: DataSource.Factory = DefaultDataSourceFactory(context, Util.getUserAgent(context, "app"))
+    val dataSourceFactory: DataSource.Factory = DefaultDataSourceFactory(context, "android " + Util.getUserAgent(context, "app"))
     val videoSource: MediaSource = ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(url))
     this.prepare(videoSource)
 }
