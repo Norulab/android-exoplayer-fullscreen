@@ -25,7 +25,7 @@ Step 2. Add the dependency
 ```
 dependencies {
 	implementation 'com.google.android.exoplayer:exoplayer:2.11.3'
-	implementation 'com.github.norulab:android-exoplayer-fullscreen:1.1.5'
+	implementation 'com.github.norulab:android-exoplayer-fullscreen:1.1.6'
 }
 ```
 
