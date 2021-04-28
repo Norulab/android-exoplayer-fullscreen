@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val playerView = findViewById<PlayerView>(R.id.playerView)
+        val playerView: PlayerView = findViewById(R.id.playerView)
 
         MediaPlayer.initialize(applicationContext)
         MediaPlayer.exoPlayer?.preparePlayer(playerView, true)
