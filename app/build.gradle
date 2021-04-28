@@ -29,6 +29,7 @@ dependencies {
     implementation 'com.google.android.exoplayer:exoplayer:2.13.3'
     implementation project(":exofullscreen")
 }
+
 repositories {
     mavenCentral()
 }
