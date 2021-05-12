@@ -102,8 +102,7 @@ You're contribution is welcome here!
 
 ## License
 ```
-Copyright 2014 - 2020 Henning Dodenhof
-
+Copyright 2021 Jérôme CLAMENT-SANZ
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
